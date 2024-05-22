@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+   <!-- <meta property="og:image" content="static/image/your_banner_image.png" />-->
+  <!-- <meta property="og:image:width" content="1200"/>-->
+   <!-- <meta property="og:image:height" content="630"/>-->
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>SINE, TRANSIENT, NOISE NEURAL MODELING OF PIANO NOTES</title>
+ <!--  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">-->
+ <!--  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">-->
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">SINE, TRANSIENT, NOISE NEURAL MODELING OF PIANO NOTES</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://www.hf.uio.no/imv/english/people/aca/temporary/riccarsi/" target="_blank">Riccardo Simionato</a>,</span>
+                <span class="author-block">
+                  <a href="https://www.hf.uio.no/imv/english/people/aca/tenured/stefanof/" target="_blank">Stefano Fasciani</a></span>
+                  <span class="author-block">
+                   <!--  <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a> -->
+                  <!-- </span> -->
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block">University of Oslo<br>DAFx 2024</span>
+                    <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/RiccardoVib/STN_Neural" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            This paper introduces a novel method for emulating piano sounds. We propose to exploit the sine, transient, and noise decomposition to design a differentiable spectral modeling synthesizer replicating piano notes. Three sub-modules learn these components from piano recordings and generate the corresponding harmonic, transient, and noise signals. Splitting the emulation into three independently trainable models reduces the modeling tasks’ complexity. The quasi-harmonic content is produced using a differentiable sinusoidal model, the noise using a learnable time-varying filter, and the transients are generated using a deep convolutional network. In addition, the harmonic component is guided by physics-derived formulas, whose parameters are automatically estimated from audio recordings. Beatings and double decay stages are also included. The results show the model matches the partial distribution of the target while predicting the energy in the higher part of the spectrum presents more challenges. Lastly, the energy distribution in the spectra of the transient and noise components is accurate overall.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- audio -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+     <!-- Your audio here -->
+   <h2 class="title is-3">BiViB Dataset</h2>
+<table align="left" id="myTable">
+  <tr> 
+            <th>Parameters</th> 
+            <th align="center" >Real</th> 
+            <th align="center" >Model</th> 
+    </tr> 
+<tr>
+     <td> <p>Key: A#4</p>
+      <p>Velocity: 89</p></td>
+         <td> <audio controls unmuted><source src="static/Audio/ST_S/BDa_Ad4_89.wav" type="audio/wav"> </audio></td>
+<td> <audio controls unmuted><source src="static/Audio/ST_S/ADa_Ad4_89.wav" type="audio/wav"> </audio></td>
+</tr>
+  <tr>
+  <td><p>Key: A3</p>
+      <p>Velocity: 100</p></td>
+       <td><audio controls unmuted><source src="static/Audio/ST_S/BDa_A3_100.wav" type="audio/wav"> </audio></td>
+       <td><audio controls unmuted><source src="static/Audio/ST_S/ADa_A3_100.wav" type="audio/wav"> </audio></td>
+      </tr>
+  <tr>
+     <td>  <p>Key: A4</p>
+      <p>Velocity: 100</p></td>
+       <td>  <audio controls unmuted><source src="static/Audio/ST_S/BDa_A4_100.wav" type="audio/wav"> </audio></td>
+     <td><audio controls unmuted><source src="static/Audio/ST_S/ADa_A4_100.wav" type="audio/wav"> </audio></td>
+ </tr>
+  <tr>
+      <td> <p>Key: C#3</p>
+      <p>Velocity: 89</p></td>
+       <td>  <audio controls unmuted><source src="static/Audio/ST_S/BDa_Cd3_89.wav" type="audio/wav"> </audio></td>
+    <td> <audio controls unmuted><source src="static/Audio/ST_S/ADa_Cd3_89.wav" type="audio/wav"> </audio></td>
+
+</tr>
+  <tr>      
+    <td> <p>Key: C4</p>
+      <p>Velocity: 100</p></td>
+     <td>    <audio controls unmuted><source src="static/Audio/ST_S/BDa_C4_100.wav" type="audio/wav"> </audio></td>
+    <td> <audio controls unmuted><source src="static/Audio/ST_S/ADa_C4_100.wav" type="audio/wav"> </audio></td>
+
+     </tr>
+  <tr>
+    <td>   <p>Key: D#3</p>
+      <p>Velocity: 67</p></td>
+      <td>   <audio controls unmuted><source src="static/Audio/ST_S/BDa_Dd3_67.wav" type="audio/wav"> </audio></td>
+    <td> <audio controls unmuted><source src="static/Audio/ST_S/ADa_Dd3_67.wav" type="audio/wav"> </audio></td>
+
+      </tr>
+  <tr>
+     <td>  <p>Key: D#4</p>
+      <p>Velocity: 100</p></td>
+       <td>   <audio controls unmuted><source src="static/Audio/ST_S/BDa_Dd4_89.wav" type="audio/wav"> </audio></td>
+       <td>   <audio controls unmuted><source src="static/Audio/ST_S/ADa_Dd4_89.wav" type="audio/wav"> </audio></td>
+    </tr>
+  <tr>
+     <td>  <p>Key: D3</p>
+      <p>Velocity: 56</p></td>
+       <td>  <audio controls unmuted><source src="static/Audio/ST_S/BDa_D3_56.wav" type="audio/wav"> </audio></td>
+       <td>  <audio controls unmuted><source src="static/Audio/ST_S/ADa_D3_56.wav" type="audio/wav"> </audio></td>
+    </tr>
+  <tr>
+     <td>  <p>Key: E3</p>
+      <p>Velocity: 67</p> </td>   
+       <td>  <audio controls unmuted><source src="static/Audio/ST_S/BDa_E3_67.wav" type="audio/wav"> </audio></td>
+       <td>  <audio controls unmuted><source src="static/Audio/ST_S/ADa_E3_67.wav" type="audio/wav"> </audio></td>
+         </tr>
+  <tr>
+    <td><p>Key: F#3</p>
+      <p>Velocity: 67</p></td>
+        <td>  <audio controls unmuted><source src="static/Audio/ST_S/BDa_Fd3_67.wav" type="audio/wav"> </audio></td>
+        <td>  <audio controls unmuted><source src="static/Audio/ST_S/ADa_Fd3_67.wav" type="audio/wav"> </audio></td>
+         </tr>
+  <tr>
+     <td><p>Key: G#4</p>
+      <p>Velocity: 67</p></td>
+       <td>  <audio controls unmuted><source src="static/Audio/ST_S/BDa_Gd4_67.wav" type="audio/wav"> </audio></td>
+       <td>  <audio controls unmuted><source src="static/Audio/ST_S/ADa_Gd4_67.wav" type="audio/wav"> </audio></td>
+         </tr>
+  <tr>
+    <td><p>Key: G4</p> 
+      <p>Velocity: 78</p></td>
+       <td>  <audio controls unmuted><source src="static/Audio/ST_S/BDa_G4_78.wav" type="audio/wav"> </audio></td>
+           <td>  <audio controls unmuted><source src="static/Audio/ST_S/ADa_G4_78.wav" type="audio/wav"> </audio></td>
+
+  </tr>
+</table>
+    </div>
+  </div>
+ </section> 
+
+  <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+       <h2 class="title is-3">BiViB Dataset (Transients)</h2>
+<table align="left" id="myTable">
+  <tr> 
+            <th>Parameters</th> 
+            <th align="center" >Real</th> 
+            <th align="center" >Model</th> 
+    </tr> 
+<tr>
+     <td> <p>Key: A#4</p>
+      <p>Velocity: 89</p></td>
+         <td> <audio controls unmuted><source src="static/Audio/ST_T/BT_Ad4_89.wav" type="audio/wav"> </audio></td>
+<td> <audio controls unmuted><source src="static/Audio/ST_T/AT_Ad4_89.wav" type="audio/wav"> </audio></td>
+</tr>
+  <tr>
+  <td><p>Key: A3</p>
+      <p>Velocity: 100</p></td>
+       <td><audio controls unmuted><source src="static/Audio/ST_T/BT_A3_100.wav" type="audio/wav"> </audio></td>
+       <td><audio controls unmuted><source src="static/Audio/ST_T/AT_A3_100.wav" type="audio/wav"> </audio></td>
+      </tr>
+  <tr>
+     <td>  <p>Key: A4</p>
+      <p>Velocity: 100</p></td>
+       <td>  <audio controls unmuted><source src="static/Audio/ST_T/BT_A4_100.wav" type="audio/wav"> </audio></td>
+     <td><audio controls unmuted><source src="static/Audio/ST_T/AT_A4_100.wav" type="audio/wav"> </audio></td>
+ </tr>
+  <tr>
+      <td> <p>Key: C#3</p>
+      <p>Velocity: 89</p></td>
+       <td>  <audio controls unmuted><source src="static/Audio/ST_T/BT_Cd3_89.wav" type="audio/wav"> </audio></td>
+    <td> <audio controls unmuted><source src="static/Audio/ST_T/AT_Cd3_89.wav" type="audio/wav"> </audio></td>
+
+</tr>
+  <tr>      
+    <td> <p>Key: C4</p>
+      <p>Velocity: 100</p></td>
+     <td>    <audio controls unmuted><source src="static/Audio/ST_T/BT_C4_100.wav" type="audio/wav"> </audio></td>
+    <td> <audio controls unmuted><source src="static/Audio/ST_T/AT_C4_100.wav" type="audio/wav"> </audio></td>
+
+     </tr>
+  <tr>
+    <td>   <p>Key: D#3</p>
+      <p>Velocity: 67</p></td>
+      <td>   <audio controls unmuted><source src="static/Audio/ST_T/BT_Dd3_67.wav" type="audio/wav"> </audio></td>
+    <td> <audio controls unmuted><source src="static/Audio/ST_T/AT_Dd3_67.wav" type="audio/wav"> </audio></td>
+
+      </tr>
+  <tr>
+     <td>  <p>Key: D#4</p>
+      <p>Velocity: 100</p></td>
+       <td>   <audio controls unmuted><source src="static/Audio/ST_T/BT_Dd4_89.wav" type="audio/wav"> </audio></td>
+       <td>   <audio controls unmuted><source src="static/Audio/ST_T/AT_Dd4_89.wav" type="audio/wav"> </audio></td>
+    </tr>
+  <tr>
+     <td>  <p>Key: D3</p>
+      <p>Velocity: 56</p></td>
+       <td>  <audio controls unmuted><source src="static/Audio/ST_T/BT_D3_56.wav" type="audio/wav"> </audio></td>
+       <td>  <audio controls unmuted><source src="static/Audio/ST_T/AT_D3_56.wav" type="audio/wav"> </audio></td>
+    </tr>
+  <tr>
+     <td>  <p>Key: E3</p>
+      <p>Velocity: 67</p> </td>   
+       <td>  <audio controls unmuted><source src="static/Audio/ST_T/BT_E3_67.wav" type="audio/wav"> </audio></td>
+       <td>  <audio controls unmuted><source src="static/Audio/ST_T/AT_E3_67.wav" type="audio/wav"> </audio></td>
+         </tr>
+  <tr>
+    <td><p>Key: F#3</p>
+      <p>Velocity: 67</p></td>
+        <td>  <audio controls unmuted><source src="static/Audio/ST_T/BT_Fd3_67.wav" type="audio/wav"> </audio></td>
+        <td>  <audio controls unmuted><source src="static/Audio/ST_T/AT_Fd3_67.wav" type="audio/wav"> </audio></td>
+         </tr>
+  <tr>
+     <td><p>Key: G#4</p>
+      <p>Velocity: 67</p></td>
+       <td>  <audio controls unmuted><source src="static/Audio/ST_T/BT_Gd4_67.wav" type="audio/wav"> </audio></td>
+       <td>  <audio controls unmuted><source src="static/Audio/ST_T/AT_Gd4_67.wav" type="audio/wav"> </audio></td>
+         </tr>
+    <td><p>Key: G4</p> 
+      <p>Velocity: 78</p></td>
+       <td>  <audio controls unmuted><source src="static/Audio/ST_T/BT_G4_78.wav" type="audio/wav"> </audio></td>
+           <td>  <audio controls unmuted><source src="static/Audio/ST_T/AT_G4_78.wav" type="audio/wav"> </audio></td>
+  </tr>
+</table>
+    </div>
+  </div>
+ </section> 
+      
+      <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="title is-3">Chords (Minor) Dataset</h2>
+<table align="left" id="myTable">
+  <tr> 
+            <th>Parameters</th> 
+            <th align="center" >Real</th> 
+            <th align="center" >Sum of the Notes</th> 
+            <th align="center" >Model</th>
+    </tr> 
+<tr>
+     <td> <p>Chord: A#3</p>
+      <p>Velocity: 70</p></td>
+         <td> <audio controls unmuted><source src="static/Audio/Chords/B_Ad3_70.wav" type="audio/wav"> </audio></td>
+<td> <audio controls unmuted><source src="static/Audio/Chords/F_Ad3_70.wav" type="audio/wav"> </audio></td>
+  <td> <audio controls unmuted><source src="static/Audio/Chords/A_Ad3_70.wav" type="audio/wav"> </audio></td>
+</tr>
+  <tr>
+  <td><p>Chord: B3</p>
+      <p>Velocity: 110</p></td>
+         <td> <audio controls unmuted><source src="static/Audio/Chords/B_B3_110.wav" type="audio/wav"> </audio></td>
+<td> <audio controls unmuted><source src="static/Audio/Chords/F_B3_110.wav" type="audio/wav"> </audio></td>
+  <td> <audio controls unmuted><source src="static/Audio/Chords/A_B3_110.wav" type="audio/wav"> </audio></td>
+      </tr>
+  <tr>
+      <td> <p>Chord: C4</p>
+      <p>Velocity: 80</p></td>
+         <td> <audio controls unmuted><source src="static/Audio/Chords/B_C4_80.wav" type="audio/wav"> </audio></td>
+<td> <audio controls unmuted><source src="static/Audio/Chords/F_C4_80.wav" type="audio/wav"> </audio></td>
+  <td> <audio controls unmuted><source src="static/Audio/Chords/A_C4_80.wav" type="audio/wav"> </audio></td>
+
+</tr>
+  <tr>      
+   <td>  <p>Chord: C#4</p>
+      <p>Velocity: 70</p></td>
+         <td> <audio controls unmuted><source src="static/Audio/Chords/B_Cd4_70.wav" type="audio/wav"> </audio></td>
+<td> <audio controls unmuted><source src="static/Audio/Chords/F_Cd4_70.wav" type="audio/wav"> </audio></td>
+  <td> <audio controls unmuted><source src="static/Audio/Chords/A_Cd4_70.wav" type="audio/wav"> </audio></td>
+
+</tr>
+  <tr>      
+    <td> <p>Chord: D3</p>
+      <p>Velocity: 60</p></td>
+         <td> <audio controls unmuted><source src="static/Audio/Chords/B_D3_60.wav" type="audio/wav"> </audio></td>
+<td> <audio controls unmuted><source src="static/Audio/Chords/F_D3_60.wav" type="audio/wav"> </audio></td>
+  <td> <audio controls unmuted><source src="static/Audio/Chords/A_D3_60.wav" type="audio/wav"> </audio></td>
+
+     </tr>
+  <tr>
+    <td>   <p>Chord: D4</p>
+      <p>Velocity: 100</p></td>
+         <td> <audio controls unmuted><source src="static/Audio/Chords/B_D4_100.wav" type="audio/wav"> </audio></td>
+<td> <audio controls unmuted><source src="static/Audio/Chords/F_D4_100.wav" type="audio/wav"> </audio></td>
+  <td> <audio controls unmuted><source src="static/Audio/Chords/A_D4_100.wav" type="audio/wav"> </audio></td>
+
+      </tr>
+  <tr>
+     <td>  <p>Chord: D#3</p>
+      <p>Velocity: 80</p></td>
+         <td> <audio controls unmuted><source src="static/Audio/Chords/B_Dd3_80.wav" type="audio/wav"> </audio></td>
+<td> <audio controls unmuted><source src="static/Audio/Chords/F_Dd3_80.wav" type="audio/wav"> </audio></td>
+  <td> <audio controls unmuted><source src="static/Audio/Chords/A_Dd3_80.wav" type="audio/wav"> </audio></td>
+    </tr>
+  <tr>
+     <td>  <p>Chord: D#4</p>
+      <p>Velocity: 70</p></td>
+         <td> <audio controls unmuted><source src="static/Audio/Chords/B_Dd4_70.wav" type="audio/wav"> </audio></td>
+<td> <audio controls unmuted><source src="static/Audio/Chords/F_Dd4_70.wav" type="audio/wav"> </audio></td>
+  <td> <audio controls unmuted><source src="static/Audio/Chords/A_Dd4_70.wav" type="audio/wav"> </audio></td>
+    </tr>
+  <tr>
+     <td>  <p>Chord: G3</p>
+      <p>Velocity: 80</p> </td>   
+         <td> <audio controls unmuted><source src="static/Audio/Chords/B_G3_80.wav" type="audio/wav"> </audio></td>
+<td> <audio controls unmuted><source src="static/Audio/Chords/F_G3_80.wav" type="audio/wav"> </audio></td>
+  <td> <audio controls unmuted><source src="static/Audio/Chords/A_G3_80.wav" type="audio/wav"> </audio></td>
+         </tr>
+
+</table>
+    </div>
+  </div>
+ </section> 
+<!-- End teaser video -->
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>BibTex Code Here</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
