@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>SINE, TRANSIENT, NOISE NEURAL MODELING OF PIANO NOTES</title>
+  <title>Physics-informed Differentiable Method for Piano Modeling</title>
  <!--  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">-->
  <!--  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">-->
@@ -52,7 +52,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">SINE, TRANSIENT, NOISE NEURAL MODELING OF PIANO NOTES</h1>
+            <h1 class="title is-1 publication-title">Physics-informed Differentiable Method for Piano Modeling</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
@@ -60,12 +60,14 @@
                 <span class="author-block">
                   <a href="https://www.hf.uio.no/imv/english/people/aca/tenured/stefanof/" target="_blank">Stefano Fasciani</a></span>
                   <span class="author-block">
+                   <a href="https://www.mn.uio.no/fysikk/english/people/aca/sverre/" target="_blank">Sverre Holm</a></span>
+                  <span class="author-block">
                    <!--  <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a> -->
                   <!-- </span> -->
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">University of Oslo<br>DAFx 2024</span>
+                    <span class="author-block">University of Oslo<br></span>
                     <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
                   </div>
 
@@ -73,7 +75,7 @@
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
                       <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        <a href="https://www.frontiersin.org/articles/10.3389/frsip.2023.1276748/full" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -85,7 +87,7 @@
 
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/RiccardoVib/STN_Neural" target="_blank"
+                    <a href="https://github.com/RiccardoVib/Physics-informed-differentiable-piano" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -109,7 +111,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            This paper introduces a novel method for emulating piano sounds. We propose to exploit the sine, transient, and noise decomposition to design a differentiable spectral modeling synthesizer replicating piano notes. Three sub-modules learn these components from piano recordings and generate the corresponding harmonic, transient, and noise signals. Splitting the emulation into three independently trainable models reduces the modeling tasks’ complexity. The quasi-harmonic content is produced using a differentiable sinusoidal model, the noise using a learnable time-varying filter, and the transients are generated using a deep convolutional network. In addition, the harmonic component is guided by physics-derived formulas, whose parameters are automatically estimated from audio recordings. Beatings and double decay stages are also included. The results show the model matches the partial distribution of the target while predicting the energy in the higher part of the spectrum presents more challenges. Lastly, the energy distribution in the spectra of the transient and noise components is accurate overall.
+Numerical emulations of the piano have been a subject of study since the early days of sound synthesis. High-accuracy sound synthesis of acoustic instruments employs physical modeling techniques which aim to describe the system’s internal mechanism using mathematical formulations. Such physical approaches are system-specific and present significant challenges for tuning the system’s parameters. In addition, acoustic instruments such as the piano present nonlinear mechanisms that present significant computational challenges for solving associated partial differential equations required to generate synthetic sound. In a nonlinear context, the stability and efficiency of the numerical schemes when performing numerical simulations are not trivial, and models generally adopt simplifying assumptions and linearizations. Artificial neural networks can learn a complex system’s behaviors from data, and their application can be beneficial for modeling acoustic instruments. Artificial neural networks typically offer less flexibility regarding the variation of internal parameters for interactive applications, such as real-time sound synthesis. However, their integration with traditional signal processing frameworks can overcome this limitation. This article presents a method for piano sound synthesis informed by the physics of the instrument, combining deep learning with traditional digital signal processing techniques. The proposed model learns to synthesize the quasi-harmonic content of individual piano notes using physics-based formulas whose parameters are automatically estimated from real audio recordings. The model thus emulates the inharmonicity of the piano and the amplitude envelopes of the partials. It is capable of generalizing with good accuracy across different keys and velocities. Challenges persist in the high-frequency part of the spectrum, where the generation of partials is less accurate, especially at high-velocity values. The architecture of the proposed model permits low-latency implementation and has low computational complexity, paving the way for a novel approach to sound synthesis in interactive digital pianos that emulates specific acoustic instruments.
           </p>
         </div>
       </div>
