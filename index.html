@@ -134,101 +134,39 @@ Numerical emulations of the piano have been a subject of study since the early d
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-  <p> The article presents a method for piano sound synthesis informed by the physics of the instrument, combining deep learning with traditional digital signal processing techniques. The proposed model is designed to learn to synthesize only the the quasi-harmonic content of individual piano notes using physics-based formulas, whose parameters are automatically estimated from real audio recordings. In doing so, the model emulates the inharmonicity of the piano and the partials' amplitude envelopes. The inharmonic/noisy component of the of the piano sound  is not modeled, hence there is a significant difference in the timbre of the real recording versus the predicted sound.
+  <p> The model emulates the inharmonicity of the piano and the partials' amplitude envelopes. The inharmonic/noisy component of the piano sound is not modeled. Hence, there is a significant difference in the timbre of the real recording versus the predicted sound.
     </p>
     </div>
      </div>
  </section>
 
+  <section class="hero teaser">
+    <div class="columns is-centered has-text-centered">
+  <div class="container">
+        <h2 class="title is-3"> - </h2>
+        <p>The title of the waveform plot details the key and MIDI velocity.</p>
+      <img src="static/images/AD460_FFT.png" alt="FFT" style="width:40%" class="center">
+      <img src="static/images/AD460_STFT.png" alt="STFT" style="width:40%" class="center">
+      </div>
+        </div>
+</section>
   
 <!-- audio -->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-    <p>The title of the waveform plot details the key and MIDI velocity.</p>
-   <h2 class="title is-3">BiViB Dataset</h2>
 <table align="left" id="myTable">
   <tr> 
             <th>Parameters</th> 
-            <th align="center" >Real</th> 
-            <th align="center" >Model</th> 
+            <th align="center" >Real Note</th> 
+            <th align="center" >Model (Quasi-harmonic Component)</th> 
     </tr> 
 <tr>
      <td> <p>Key: A#4</p>
-      <p>Velocity: 89</p></td>
-         <td> <audio controls unmuted><source src="static/Audio/ST_S/BDa_Ad4_89.wav" type="audio/wav"> </audio></td>
-<td> <audio controls unmuted><source src="static/Audio/ST_S/ADa_Ad4_89.wav" type="audio/wav"> </audio></td>
+      <p>Velocity: 60</p></td>
+         <td> <audio controls unmuted><source src="static/AD460_tar.wav" type="audio/wav"> </audio></td>
+<td> <audio controls unmuted><source src="static/AD460_pred.wav" type="audio/wav"> </audio></td>
 </tr>
-  <tr>
-  <td><p>Key: A3</p>
-      <p>Velocity: 100</p></td>
-       <td><audio controls unmuted><source src="static/Audio/ST_S/BDa_A3_100.wav" type="audio/wav"> </audio></td>
-       <td><audio controls unmuted><source src="static/Audio/ST_S/ADa_A3_100.wav" type="audio/wav"> </audio></td>
-      </tr>
-  <tr>
-     <td>  <p>Key: A4</p>
-      <p>Velocity: 100</p></td>
-       <td>  <audio controls unmuted><source src="static/Audio/ST_S/BDa_A4_100.wav" type="audio/wav"> </audio></td>
-     <td><audio controls unmuted><source src="static/Audio/ST_S/ADa_A4_100.wav" type="audio/wav"> </audio></td>
- </tr>
-  <tr>
-      <td> <p>Key: C#3</p>
-      <p>Velocity: 89</p></td>
-       <td>  <audio controls unmuted><source src="static/Audio/ST_S/BDa_Cd3_89.wav" type="audio/wav"> </audio></td>
-    <td> <audio controls unmuted><source src="static/Audio/ST_S/ADa_Cd3_89.wav" type="audio/wav"> </audio></td>
-
-</tr>
-  <tr>      
-    <td> <p>Key: C4</p>
-      <p>Velocity: 100</p></td>
-     <td>    <audio controls unmuted><source src="static/Audio/ST_S/BDa_C4_100.wav" type="audio/wav"> </audio></td>
-    <td> <audio controls unmuted><source src="static/Audio/ST_S/ADa_C4_100.wav" type="audio/wav"> </audio></td>
-
-     </tr>
-  <tr>
-    <td>   <p>Key: D#3</p>
-      <p>Velocity: 67</p></td>
-      <td>   <audio controls unmuted><source src="static/Audio/ST_S/BDa_Dd3_67.wav" type="audio/wav"> </audio></td>
-    <td> <audio controls unmuted><source src="static/Audio/ST_S/ADa_Dd3_67.wav" type="audio/wav"> </audio></td>
-
-      </tr>
-  <tr>
-     <td>  <p>Key: D#4</p>
-      <p>Velocity: 100</p></td>
-       <td>   <audio controls unmuted><source src="static/Audio/ST_S/BDa_Dd4_89.wav" type="audio/wav"> </audio></td>
-       <td>   <audio controls unmuted><source src="static/Audio/ST_S/ADa_Dd4_89.wav" type="audio/wav"> </audio></td>
-    </tr>
-  <tr>
-     <td>  <p>Key: D3</p>
-      <p>Velocity: 56</p></td>
-       <td>  <audio controls unmuted><source src="static/Audio/ST_S/BDa_D3_56.wav" type="audio/wav"> </audio></td>
-       <td>  <audio controls unmuted><source src="static/Audio/ST_S/ADa_D3_56.wav" type="audio/wav"> </audio></td>
-    </tr>
-  <tr>
-     <td>  <p>Key: E3</p>
-      <p>Velocity: 67</p> </td>   
-       <td>  <audio controls unmuted><source src="static/Audio/ST_S/BDa_E3_67.wav" type="audio/wav"> </audio></td>
-       <td>  <audio controls unmuted><source src="static/Audio/ST_S/ADa_E3_67.wav" type="audio/wav"> </audio></td>
-         </tr>
-  <tr>
-    <td><p>Key: F#3</p>
-      <p>Velocity: 67</p></td>
-        <td>  <audio controls unmuted><source src="static/Audio/ST_S/BDa_Fd3_67.wav" type="audio/wav"> </audio></td>
-        <td>  <audio controls unmuted><source src="static/Audio/ST_S/ADa_Fd3_67.wav" type="audio/wav"> </audio></td>
-         </tr>
-  <tr>
-     <td><p>Key: G#4</p>
-      <p>Velocity: 67</p></td>
-       <td>  <audio controls unmuted><source src="static/Audio/ST_S/BDa_Gd4_67.wav" type="audio/wav"> </audio></td>
-       <td>  <audio controls unmuted><source src="static/Audio/ST_S/ADa_Gd4_67.wav" type="audio/wav"> </audio></td>
-         </tr>
-  <tr>
-    <td><p>Key: G4</p> 
-      <p>Velocity: 78</p></td>
-       <td>  <audio controls unmuted><source src="static/Audio/ST_S/BDa_G4_78.wav" type="audio/wav"> </audio></td>
-           <td>  <audio controls unmuted><source src="static/Audio/ST_S/ADa_G4_78.wav" type="audio/wav"> </audio></td>
-
-  </tr>
 </table>
     </div>
   </div>
