@@ -136,6 +136,7 @@ Numerical emulations of the piano have been a subject of study since the early d
     <div class="hero-body">
   <p> The model emulates the inharmonicity of the piano and the partials' amplitude envelopes. The inharmonic/noisy component of the piano sound is not modeled. Hence, there is a significant difference in the timbre of the real recording versus the predicted sound.
     </p>
+       <p>The title of the waveform plot details the key and MIDI velocity.</p>
     </div>
      </div>
  </section>
@@ -144,7 +145,6 @@ Numerical emulations of the piano have been a subject of study since the early d
     <div class="columns is-centered has-text-centered">
   <div class="container">
         <h2 class="title is-3"> - </h2>
-        <p>The title of the waveform plot details the key and MIDI velocity.</p>
       <img src="static/images/AD460_FFT.png" alt="FFT" style="width:40%" class="center">
       <img src="static/images/AD460_STFT.png" alt="STFT" style="width:40%" class="center">
       </div>
@@ -164,186 +164,44 @@ Numerical emulations of the piano have been a subject of study since the early d
 <tr>
      <td> <p>Key: A#4</p>
       <p>Velocity: 60</p></td>
-         <td> <audio controls unmuted><source src="static/AD460_tar.wav" type="audio/wav"> </audio></td>
-<td> <audio controls unmuted><source src="static/AD460_pred.wav" type="audio/wav"> </audio></td>
+         <td> <audio controls unmuted><source src="static/images/AD460_tar.wav" type="audio/wav"> </audio></td>
+<td> <audio controls unmuted><source src="static/images/AD460_pred.wav" type="audio/wav"> </audio></td>
 </tr>
 </table>
     </div>
   </div>
- </section> 
 
-  <section class="hero teaser">
+      <div class="columns is-centered has-text-centered">
+  <div class="container">
+        <h2 class="title is-3"> - </h2>
+      <img src="static/images/AD470_FFT.png" alt="FFT" style="width:40%" class="center">
+      <img src="static/images/AD470_STFT.png" alt="STFT" style="width:40%" class="center">
+      </div>
+        </div>
+</section>
+  
+<!-- audio -->
+<section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-       <h2 class="title is-3">BiViB Dataset (Transients)</h2>
 <table align="left" id="myTable">
   <tr> 
             <th>Parameters</th> 
-            <th align="center" >Real</th> 
-            <th align="center" >Model</th> 
+            <th align="center" >Real Note</th> 
+            <th align="center" >Model (Quasi-harmonic Component)</th> 
     </tr> 
 <tr>
      <td> <p>Key: A#4</p>
-      <p>Velocity: 89</p></td>
-         <td> <audio controls unmuted><source src="static/Audio/ST_T/BT_Ad4_89.wav" type="audio/wav"> </audio></td>
-<td> <audio controls unmuted><source src="static/Audio/ST_T/AT_Ad4_89.wav" type="audio/wav"> </audio></td>
+      <p>Velocity: 70</p></td>
+         <td> <audio controls unmuted><source src="static/images/AD470_tar.wav" type="audio/wav"> </audio></td>
+<td> <audio controls unmuted><source src="static/images/AD470_pred.wav" type="audio/wav"> </audio></td>
 </tr>
-  <tr>
-  <td><p>Key: A3</p>
-      <p>Velocity: 100</p></td>
-       <td><audio controls unmuted><source src="static/Audio/ST_T/BT_A3_100.wav" type="audio/wav"> </audio></td>
-       <td><audio controls unmuted><source src="static/Audio/ST_T/AT_A3_100.wav" type="audio/wav"> </audio></td>
-      </tr>
-  <tr>
-     <td>  <p>Key: A4</p>
-      <p>Velocity: 100</p></td>
-       <td>  <audio controls unmuted><source src="static/Audio/ST_T/BT_A4_100.wav" type="audio/wav"> </audio></td>
-     <td><audio controls unmuted><source src="static/Audio/ST_T/AT_A4_100.wav" type="audio/wav"> </audio></td>
- </tr>
-  <tr>
-      <td> <p>Key: C#3</p>
-      <p>Velocity: 89</p></td>
-       <td>  <audio controls unmuted><source src="static/Audio/ST_T/BT_Cd3_89.wav" type="audio/wav"> </audio></td>
-    <td> <audio controls unmuted><source src="static/Audio/ST_T/AT_Cd3_89.wav" type="audio/wav"> </audio></td>
-
-</tr>
-  <tr>      
-    <td> <p>Key: C4</p>
-      <p>Velocity: 100</p></td>
-     <td>    <audio controls unmuted><source src="static/Audio/ST_T/BT_C4_100.wav" type="audio/wav"> </audio></td>
-    <td> <audio controls unmuted><source src="static/Audio/ST_T/AT_C4_100.wav" type="audio/wav"> </audio></td>
-
-     </tr>
-  <tr>
-    <td>   <p>Key: D#3</p>
-      <p>Velocity: 67</p></td>
-      <td>   <audio controls unmuted><source src="static/Audio/ST_T/BT_Dd3_67.wav" type="audio/wav"> </audio></td>
-    <td> <audio controls unmuted><source src="static/Audio/ST_T/AT_Dd3_67.wav" type="audio/wav"> </audio></td>
-
-      </tr>
-  <tr>
-     <td>  <p>Key: D#4</p>
-      <p>Velocity: 100</p></td>
-       <td>   <audio controls unmuted><source src="static/Audio/ST_T/BT_Dd4_89.wav" type="audio/wav"> </audio></td>
-       <td>   <audio controls unmuted><source src="static/Audio/ST_T/AT_Dd4_89.wav" type="audio/wav"> </audio></td>
-    </tr>
-  <tr>
-     <td>  <p>Key: D3</p>
-      <p>Velocity: 56</p></td>
-       <td>  <audio controls unmuted><source src="static/Audio/ST_T/BT_D3_56.wav" type="audio/wav"> </audio></td>
-       <td>  <audio controls unmuted><source src="static/Audio/ST_T/AT_D3_56.wav" type="audio/wav"> </audio></td>
-    </tr>
-  <tr>
-     <td>  <p>Key: E3</p>
-      <p>Velocity: 67</p> </td>   
-       <td>  <audio controls unmuted><source src="static/Audio/ST_T/BT_E3_67.wav" type="audio/wav"> </audio></td>
-       <td>  <audio controls unmuted><source src="static/Audio/ST_T/AT_E3_67.wav" type="audio/wav"> </audio></td>
-         </tr>
-  <tr>
-    <td><p>Key: F#3</p>
-      <p>Velocity: 67</p></td>
-        <td>  <audio controls unmuted><source src="static/Audio/ST_T/BT_Fd3_67.wav" type="audio/wav"> </audio></td>
-        <td>  <audio controls unmuted><source src="static/Audio/ST_T/AT_Fd3_67.wav" type="audio/wav"> </audio></td>
-         </tr>
-  <tr>
-     <td><p>Key: G#4</p>
-      <p>Velocity: 67</p></td>
-       <td>  <audio controls unmuted><source src="static/Audio/ST_T/BT_Gd4_67.wav" type="audio/wav"> </audio></td>
-       <td>  <audio controls unmuted><source src="static/Audio/ST_T/AT_Gd4_67.wav" type="audio/wav"> </audio></td>
-         </tr>
-    <td><p>Key: G4</p> 
-      <p>Velocity: 78</p></td>
-       <td>  <audio controls unmuted><source src="static/Audio/ST_T/BT_G4_78.wav" type="audio/wav"> </audio></td>
-           <td>  <audio controls unmuted><source src="static/Audio/ST_T/AT_G4_78.wav" type="audio/wav"> </audio></td>
-  </tr>
 </table>
     </div>
   </div>
  </section> 
-      
-      <section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <h2 class="title is-3">Chords (Minor) Dataset</h2>
-<table align="left" id="myTable">
-  <tr> 
-            <th>Parameters</th> 
-            <th align="center" >Real</th> 
-            <th align="center" >Sum of the Notes</th> 
-            <th align="center" >Model</th>
-    </tr> 
-<tr>
-     <td> <p>Chord: A#3</p>
-      <p>Velocity: 70</p></td>
-         <td> <audio controls unmuted><source src="static/Audio/Chords/B_Ad3_70.wav" type="audio/wav"> </audio></td>
-<td> <audio controls unmuted><source src="static/Audio/Chords/F_Ad3_70.wav" type="audio/wav"> </audio></td>
-  <td> <audio controls unmuted><source src="static/Audio/Chords/A_Ad3_70.wav" type="audio/wav"> </audio></td>
-</tr>
-  <tr>
-  <td><p>Chord: B3</p>
-      <p>Velocity: 110</p></td>
-         <td> <audio controls unmuted><source src="static/Audio/Chords/B_B3_110.wav" type="audio/wav"> </audio></td>
-<td> <audio controls unmuted><source src="static/Audio/Chords/F_B3_110.wav" type="audio/wav"> </audio></td>
-  <td> <audio controls unmuted><source src="static/Audio/Chords/A_B3_110.wav" type="audio/wav"> </audio></td>
-      </tr>
-  <tr>
-      <td> <p>Chord: C4</p>
-      <p>Velocity: 80</p></td>
-         <td> <audio controls unmuted><source src="static/Audio/Chords/B_C4_80.wav" type="audio/wav"> </audio></td>
-<td> <audio controls unmuted><source src="static/Audio/Chords/F_C4_80.wav" type="audio/wav"> </audio></td>
-  <td> <audio controls unmuted><source src="static/Audio/Chords/A_C4_80.wav" type="audio/wav"> </audio></td>
 
-</tr>
-  <tr>      
-   <td>  <p>Chord: C#4</p>
-      <p>Velocity: 70</p></td>
-         <td> <audio controls unmuted><source src="static/Audio/Chords/B_Cd4_70.wav" type="audio/wav"> </audio></td>
-<td> <audio controls unmuted><source src="static/Audio/Chords/F_Cd4_70.wav" type="audio/wav"> </audio></td>
-  <td> <audio controls unmuted><source src="static/Audio/Chords/A_Cd4_70.wav" type="audio/wav"> </audio></td>
 
-</tr>
-  <tr>      
-    <td> <p>Chord: D3</p>
-      <p>Velocity: 60</p></td>
-         <td> <audio controls unmuted><source src="static/Audio/Chords/B_D3_60.wav" type="audio/wav"> </audio></td>
-<td> <audio controls unmuted><source src="static/Audio/Chords/F_D3_60.wav" type="audio/wav"> </audio></td>
-  <td> <audio controls unmuted><source src="static/Audio/Chords/A_D3_60.wav" type="audio/wav"> </audio></td>
-
-     </tr>
-  <tr>
-    <td>   <p>Chord: D4</p>
-      <p>Velocity: 100</p></td>
-         <td> <audio controls unmuted><source src="static/Audio/Chords/B_D4_100.wav" type="audio/wav"> </audio></td>
-<td> <audio controls unmuted><source src="static/Audio/Chords/F_D4_100.wav" type="audio/wav"> </audio></td>
-  <td> <audio controls unmuted><source src="static/Audio/Chords/A_D4_100.wav" type="audio/wav"> </audio></td>
-
-      </tr>
-  <tr>
-     <td>  <p>Chord: D#3</p>
-      <p>Velocity: 80</p></td>
-         <td> <audio controls unmuted><source src="static/Audio/Chords/B_Dd3_80.wav" type="audio/wav"> </audio></td>
-<td> <audio controls unmuted><source src="static/Audio/Chords/F_Dd3_80.wav" type="audio/wav"> </audio></td>
-  <td> <audio controls unmuted><source src="static/Audio/Chords/A_Dd3_80.wav" type="audio/wav"> </audio></td>
-    </tr>
-  <tr>
-     <td>  <p>Chord: D#4</p>
-      <p>Velocity: 70</p></td>
-         <td> <audio controls unmuted><source src="static/Audio/Chords/B_Dd4_70.wav" type="audio/wav"> </audio></td>
-<td> <audio controls unmuted><source src="static/Audio/Chords/F_Dd4_70.wav" type="audio/wav"> </audio></td>
-  <td> <audio controls unmuted><source src="static/Audio/Chords/A_Dd4_70.wav" type="audio/wav"> </audio></td>
-    </tr>
-  <tr>
-     <td>  <p>Chord: G3</p>
-      <p>Velocity: 80</p> </td>   
-         <td> <audio controls unmuted><source src="static/Audio/Chords/B_G3_80.wav" type="audio/wav"> </audio></td>
-<td> <audio controls unmuted><source src="static/Audio/Chords/F_G3_80.wav" type="audio/wav"> </audio></td>
-  <td> <audio controls unmuted><source src="static/Audio/Chords/A_G3_80.wav" type="audio/wav"> </audio></td>
-         </tr>
-
-</table>
-    </div>
-  </div>
- </section> 
 <!-- End teaser video -->
 
 
@@ -351,7 +209,7 @@ Numerical emulations of the piano have been a subject of study since the early d
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
+      <pre><code> </code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
